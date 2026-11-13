@@ -1,0 +1,24 @@
+// garmin-mcp – Andras saját Cloudflare-telepítése (Jó úton app). Titkos érték nincs ebben a fájlban.
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "garmin-cloud-mcp",
+	"main": "src/index.ts",
+	"compatibility_date": "2026-11-01",
+	"compatibility_flags": [
+		"nodejs_compat",
+		"global_fetch_strictly_public"
+	],
+	"vars": {
+		"MCP_RESOURCE": "https://garmin-cloud-mcp.mr-andras-keri.workers.dev/mcp",
+		"ALLOWED_GITHUB_USER_ID": "356141605"
+	},
+	"kv_namespaces": [
+		{
+			"binding": "OAUTH_KV",
+			"id": "54e79c247bff4f79a16835281980ccf2"
+		}
+	],
+	"observability": {
+		"enabled": true
+	}
+}
